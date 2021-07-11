@@ -30,30 +30,16 @@
   <body>
     <nav
       x-data="{ open: false }"
-      class="
-        flex flex-col
-        max-w-screen-xl
-        mx-auto
-        md:items-center md:justify-between md:flex-row md:px-6
-        lg:px-8
-      "
+      class="flex flex-col max-w-screen-xl mx-auto  md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
     >
-      <div class="p-4 flex flex-row items-center justify-between z-20">
+      <div class="z-20 flex flex-row items-center justify-between p-4">
         <a
           href="#"
-          class="
-            text-lg
-            font-semibold
-            tracking-widest
-            text-gray-900
-            uppercase
-            rounded-lg
-            focus:outline-none focus:shadow-outline
-          "
+          class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg  focus:outline-none focus:shadow-outline"
           >COMPANY</a
         >
         <button
-          class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+          class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
           @click="open = !open"
         >
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -74,13 +60,7 @@
       </div>
       <nav
         :class="{'flex': open, 'hidden': !open}"
-        class="
-          flex-col flex-grow
-          pb-4
-          md:pb-0
-          hidden
-          md:flex md:justify-end md:flex-row
-        "
+        class="flex-col flex-grow hidden pb-4  md:pb-0 md:flex md:justify-end md:flex-row"
       >
         <div
           @click.away="open = false"
@@ -89,23 +69,7 @@
         >
           <button
             @click="open = !open"
-            class="
-              flex flex-row
-              items-center
-              w-full
-              px-4
-              py-2
-              mt-4
-              text-sm
-              font-semibold
-              text-left
-              rounded-lg
-              md:w-auto md:inline md:mt-0 md:ml-4
-              hover:text-gray-900
-              focus:text-gray-900
-              hover:bg-gray-200
-              focus:bg-gray-300 focus:outline-none focus:shadow-outline
-            "
+            class="flex flex-row items-center w-full px-4 py-2 mt-4 text-sm font-semibold text-left rounded-lg  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-300 focus:outline-none focus:shadow-outline"
           >
             <span>ABOUT US</span>
           </button>
@@ -117,54 +81,16 @@
             x-transition:leave="transition ease-in duration-75"
             x-transition:leave-start="transform opacity-100 scale-100"
             x-transition:leave-end="transform opacity-0 scale-95"
-            class="
-              absolute
-              z-20
-              right-0
-              w-full
-              mt-2
-              origin-top-right
-              rounded-md
-              shadow-lg
-              md:w-48
-            "
+            class="absolute right-0 z-20 w-full mt-2 origin-top-right rounded-md shadow-lg  md:w-48"
           >
             <div class="px-2 py-2 bg-white rounded-md shadow">
               <a
-                class="
-                  block
-                  px-4
-                  py-2
-                  mt-2
-                  text-sm
-                  font-semibold
-                  bg-transparent
-                  rounded-lg
-                  md:mt-0
-                  hover:text-gray-900
-                  focus:text-gray-900
-                  hover:bg-gray-200
-                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
-                "
+                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#"
                 >HISTORY</a
               >
               <a
-                class="
-                  block
-                  px-4
-                  py-2
-                  mt-2
-                  text-sm
-                  font-semibold
-                  bg-transparent
-                  rounded-lg
-                  md:mt-0
-                  hover:text-gray-900
-                  focus:text-gray-900
-                  hover:bg-gray-200
-                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
-                "
+                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#"
                 >VISSION MISSION</a
               >
@@ -172,56 +98,17 @@
           </div>
         </div>
         <a
-          class="
-            px-4
-            py-2
-            mt-4
-            text-sm
-            font-semibold
-            bg-transparent
-            rounded-lg
-            md:mt-0 md:ml-4
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
-          "
+          class="px-4 py-2 mt-4 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           href="#"
           >OUR WORK</a
         >
         <a
-          class="
-            px-4
-            py-2
-            mt-4
-            text-sm
-            font-semibold
-            bg-transparent
-            rounded-lg
-            md:mt-0 md:ml-4
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
-          "
+          class="px-4 py-2 mt-4 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           href="#"
           >OUR TEAM</a
         >
         <a
-          class="
-            px-4
-            py-2
-            mt-4
-            text-sm
-            font-semibold
-            bg-transparent
-            rounded-lg
-            md:mt-0 md:ml-4
-            hover:text-gray-900
-            focus:text-gray-900
-            hover:bg-gray-200
-            focus:bg-gray-200 focus:outline-none focus:shadow-outline
-          "
+          class="px-4 py-2 mt-4 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           href="#"
           >CONTACT</a
         >
@@ -251,9 +138,12 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="assets/images/bg.jpg" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+          <div
+            class="font-bold text-left carousel-caption d-none d-md-block"
+            style="background-color: #141414"
+          >
+            <p class="px-4">THIS IS A PLACE WHERE TECHNOLOGY &</p>
+            <p class="px-4">CREATIVITY FUSED INTO DIGITAL CHEMISTRY</p>
           </div>
         </div>
         <div class="carousel-item">
@@ -262,9 +152,12 @@
             class="d-block w-100"
             alt="..."
           />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+          <div
+            class="font-bold text-left  carousel-caption d-none d-md-block transpara"
+            style="background-color: #141414"
+          >
+            <p class="px-4">WE DON'T HAVE THE BEST BUT WE HAVE THE</p>
+            <p class="px-4">GREATEST TEAM</p>
           </div>
         </div>
       </div>
@@ -287,43 +180,206 @@
         <span class="visually-hidden">Next</span>
       </button>
     </section>
-    <section class="border max-w-7xl mx-auto py-40">
-      <h2 class="text-center text-3xl font-bold">Our Values</h2>
-      <div class="grid grid-cols-3 space-x-5 text-center text-white">
-        <div class="bg-yellow-500 space-y-4 py-3">
-          <img
-            src="assets/images/lightbulb-o.png"
-            class="mx-auto w-8 h-8 mt-3"
-          />
+    <section class="py-10 mx-auto max-w-7xl">
+      <h2 class="mt-16 text-3xl font-bold text-center">OUR VALUES</h2>
+      <div class="grid grid-cols-3 mt-5 space-x-5 text-center text-white">
+        <div class="py-3 space-y-4" style="background-color: #ea7c6f">
+          <img src="assets/images/lightbulb-o.png" class="h-8 mx-auto mt-3" />
           <h3>INNOVATIVE</h3>
-          <p>
+          <p class="px-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
             velit! Amet minima neque dolor dolore, id adipisci obcaecati
             accusamus doloremque.
           </p>
         </div>
-        <div class="bg-green-500 space-y-4 py-3">
-          <img src="assets/images/bank.png" class="mx-auto w-8 h-8 mt-3" />
+        <div class="py-3 space-y-4" style="background-color: #6a996f">
+          <img src="assets/images/bank.png" class="w-8 h-8 mx-auto mt-3" />
           <h3>LOYALTY</h3>
-          <p>
+          <p class="px-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quia
             quod id voluptatem aliquid veritatis ipsum! Ad sapiente dignissimos
             nemo?
           </p>
         </div>
-        <div class="bg-blue-500 space-y-4 py-">
+        <div class="py-3 space-y-4" style="background-color: #5696c2">
           <img
             src="assets/images/balance-scale.png"
-            class="mx-auto w-8 h-8 mt-3"
+            class="w-8 h-8 mx-auto mt-3"
           />
           <h3>RESPECT</h3>
-          <p>
+          <p class="px-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quia
             quod id voluptatem aliquid veritatis ipsum! Ad sapiente dignissimos
             nemo?
           </p>
         </div>
       </div>
+    </section>
+    <section class="py-10 mx-auto max-w-7xl">
+      <h2 class="mt-16 text-3xl font-bold text-center">CONTACT US</h2>
+      <form class="space-y-8 divide-y divide-gray-200">
+        <div class="space-y-8">
+          <div class="pt-8">
+            <div class="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-6">
+              <div class="sm:col-span-3">
+                <label
+                  for="first_name"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  First name
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    autocomplete="given-name"
+                    class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label
+                  for="last_name"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Last name
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="last_name"
+                    id="last_name"
+                    autocomplete="family-name"
+                    class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-4">
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Email address
+                </label>
+                <div class="mt-1">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label
+                  for="country"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Country / Region
+                </label>
+                <div class="mt-1">
+                  <select
+                    id="country"
+                    name="country"
+                    autocomplete="country"
+                    class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  >
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>Mexico</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="sm:col-span-6">
+                <label
+                  for="street_address"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  Street address
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="street_address"
+                    id="street_address"
+                    autocomplete="street-address"
+                    class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label
+                  for="city"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  City
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label
+                  for="state"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  State / Province
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="state"
+                    id="state"
+                    class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label
+                  for="zip"
+                  class="block text-sm font-medium text-gray-700"
+                >
+                  ZIP / Postal
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="zip"
+                    id="zip"
+                    autocomplete="postal-code"
+                    class="block w-full border-gray-300 rounded-md shadow-sm  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5">
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="inline-flex justify-center px-4 py-2 ml-3 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm  hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </form>
     </section>
   </body>
 </html>
