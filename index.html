@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <nav
+      x-data="{ open: false }"
+      class="
+        flex flex-col
+        max-w-screen-xl
+        mx-auto
+        md:items-center md:justify-between md:flex-row md:px-6
+        lg:px-8
+      "
+    >
+      <div class="p-4 flex flex-row items-center justify-between z-20">
+        <a
+          href="#"
+          class="
+            text-lg
+            font-semibold
+            tracking-widest
+            text-gray-900
+            uppercase
+            rounded-lg
+            focus:outline-none focus:shadow-outline
+          "
+          >COMPANY</a
+        >
+        <button
+          class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+          @click="open = !open"
+        >
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path
+              x-show="!open"
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+            <path
+              x-show="open"
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <nav
+        :class="{'flex': open, 'hidden': !open}"
+        class="
+          flex-col flex-grow
+          pb-4
+          md:pb-0
+          hidden
+          md:flex md:justify-end md:flex-row
+        "
+      >
+        <div
+          @click.away="open = false"
+          class="relative"
+          x-data="{ open: false }"
+        >
+          <button
+            @click="open = !open"
+            class="
+              flex flex-row
+              items-center
+              w-full
+              px-4
+              py-2
+              mt-4
+              text-sm
+              font-semibold
+              text-left
+              rounded-lg
+              md:w-auto md:inline md:mt-0 md:ml-4
+              hover:text-gray-900
+              focus:text-gray-900
+              hover:bg-gray-200
+              focus:bg-gray-300 focus:outline-none focus:shadow-outline
+            "
+          >
+            <span>ABOUT US</span>
+          </button>
+          <div
+            x-show="open"
+            x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="
+              absolute
+              z-20
+              right-0
+              w-full
+              mt-2
+              origin-top-right
+              rounded-md
+              shadow-lg
+              md:w-48
+            "
+          >
+            <div class="px-2 py-2 bg-white rounded-md shadow">
+              <a
+                class="
+                  block
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  md:mt-0
+                  hover:text-gray-900
+                  focus:text-gray-900
+                  hover:bg-gray-200
+                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
+                "
+                href="#"
+                >HISTORY</a
+              >
+              <a
+                class="
+                  block
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  md:mt-0
+                  hover:text-gray-900
+                  focus:text-gray-900
+                  hover:bg-gray-200
+                  focus:bg-gray-200 focus:outline-none focus:shadow-outline
+                "
+                href="#"
+                >VISSION MISSION</a
+              >
+            </div>
+          </div>
+        </div>
+        <a
+          class="
+            px-4
+            py-2
+            mt-4
+            text-sm
+            font-semibold
+            bg-transparent
+            rounded-lg
+            md:mt-0 md:ml-4
+            hover:text-gray-900
+            focus:text-gray-900
+            hover:bg-gray-200
+            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+          "
+          href="#"
+          >OUR WORK</a
+        >
+        <a
+          class="
+            px-4
+            py-2
+            mt-4
+            text-sm
+            font-semibold
+            bg-transparent
+            rounded-lg
+            md:mt-0 md:ml-4
+            hover:text-gray-900
+            focus:text-gray-900
+            hover:bg-gray-200
+            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+          "
+          href="#"
+          >OUR TEAM</a
+        >
+        <a
+          class="
+            px-4
+            py-2
+            mt-4
+            text-sm
+            font-semibold
+            bg-transparent
+            rounded-lg
+            md:mt-0 md:ml-4
+            hover:text-gray-900
+            focus:text-gray-900
+            hover:bg-gray-200
+            focus:bg-gray-200 focus:outline-none focus:shadow-outline
+          "
+          href="#"
+          >CONTACT</a
+        >
+      </nav>
+    </nav>
+    <section
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/images/bg.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="assets/images/about-bg.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </section>
+    <section class="border max-w-7xl mx-auto py-40">
+      <h2 class="text-center text-3xl font-bold">Our Values</h2>
+      <div class="grid grid-cols-3 space-x-5 text-center text-white">
+        <div class="bg-yellow-500 space-y-4 py-3">
+          <img
+            src="assets/images/lightbulb-o.png"
+            class="mx-auto w-8 h-8 mt-3"
+          />
+          <h3>INNOVATIVE</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+            velit! Amet minima neque dolor dolore, id adipisci obcaecati
+            accusamus doloremque.
+          </p>
+        </div>
+        <div class="bg-green-500 space-y-4 py-3">
+          <img src="assets/images/bank.png" class="mx-auto w-8 h-8 mt-3" />
+          <h3>LOYALTY</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quia
+            quod id voluptatem aliquid veritatis ipsum! Ad sapiente dignissimos
+            nemo?
+          </p>
+        </div>
+        <div class="bg-blue-500 space-y-4 py-">
+          <img
+            src="assets/images/balance-scale.png"
+            class="mx-auto w-8 h-8 mt-3"
+          />
+          <h3>RESPECT</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quia
+            quod id voluptatem aliquid veritatis ipsum! Ad sapiente dignissimos
+            nemo?
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
