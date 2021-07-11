@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carousel-caption {
+  bottom: 6.25rem;
+  max-width: 50ch;
+}
