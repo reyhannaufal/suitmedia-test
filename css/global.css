@@ -6,3 +6,29 @@
   bottom: 6.25rem;
   max-width: 50ch;
 }
+
+.carousel-control-prev-icon {
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.carousel-control-next-icon {
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 29px;
+  height: 29px;
+  border-radius: 100%;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.hide {
+  opacity: 0;
+}

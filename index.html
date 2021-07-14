@@ -2,9 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Suitmedia Test</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,6 +25,7 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
+    <script src="/js/index.js" defer></script>
   </head>
   <body>
     <nav
@@ -63,13 +63,13 @@
         class="flex-col flex-grow hidden pb-4  md:pb-0 md:flex md:justify-end md:flex-row"
       >
         <div
-          @click.away="open = false"
+          @mouseleave="open = false"
           class="relative"
           x-data="{ open: false }"
         >
           <button
-            @click="open = !open"
-            class="flex flex-row items-center w-full px-4 py-2 mt-4 text-sm font-semibold text-left rounded-lg  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-300 focus:outline-none focus:shadow-outline"
+            @mouseover="open = !open"
+            class="flex flex-row items-center w-full px-4 py-2 mt-4 text-sm font-semibold text-left  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-300 focus:outline-none focus:shadow-outline"
           >
             <span>ABOUT US</span>
           </button>
@@ -85,12 +85,12 @@
           >
             <div class="px-2 py-2 bg-white rounded-md shadow">
               <a
-                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="block px-4 py-2 mt-2 text-sm font-semibold  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#"
                 >HISTORY</a
               >
               <a
-                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="block px-4 py-2 mt-2 text-sm font-semibold  md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                 href="#"
                 >VISSION MISSION</a
               >
@@ -98,206 +98,190 @@
           </div>
         </div>
         <a
-          class="px-4 py-2 mt-4 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="px-4 py-2 mt-4 text-sm font-semibold  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           href="#"
           >OUR WORK</a
         >
         <a
-          class="px-4 py-2 mt-4 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="px-4 py-2 mt-4 text-sm font-semibold  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           href="#"
           >OUR TEAM</a
         >
         <a
-          class="px-4 py-2 mt-4 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          class="px-4 py-2 mt-4 text-sm font-semibold  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
           href="#"
           >CONTACT</a
         >
       </nav>
     </nav>
-    <section
-      id="carouselExampleCaptions"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/images/bg.jpg" class="d-block w-100" alt="..." />
-          <div
-            class="font-bold text-left carousel-caption d-none d-md-block"
-            style="background-color: #141414"
-          >
-            <p class="px-4">THIS IS A PLACE WHERE TECHNOLOGY &</p>
-            <p class="px-4">CREATIVITY FUSED INTO DIGITAL CHEMISTRY</p>
+    <main>
+      <!-- main section -->
+      <section
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/bg.jpg" class="d-block w-100" alt="..." />
+            <div
+              class="font-bold text-left carousel-caption d-none d-md-block"
+              style="background-color: #141414"
+            >
+              <p class="px-4">THIS IS A PLACE WHERE TECHNOLOGY &</p>
+              <p class="px-4">CREATIVITY FUSED INTO DIGITAL CHEMISTRY</p>
+            </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="assets/images/about-bg.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-          <div
-            class="font-bold text-left  carousel-caption d-none d-md-block transpara"
-            style="background-color: #141414"
-          >
-            <p class="px-4">WE DON'T HAVE THE BEST BUT WE HAVE THE</p>
-            <p class="px-4">GREATEST TEAM</p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </section>
-    <section class="py-10 mx-auto max-w-7xl">
-      <h2 class="text-3xl font-bold text-center md:mt-16">OUR VALUES</h2>
-      <div
-        class="grid grid-cols-1 mt-5 text-center text-white  md:space-x-5 lg:grid-cols-3"
-      >
-        <div class="py-3 space-y-4" style="background-color: #ea7c6f">
-          <img src="assets/images/lightbulb-o.png" class="h-8 mx-auto mt-3" />
-          <h3>INNOVATIVE</h3>
-          <p class="px-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
-            velit! Amet minima neque dolor dolore, id adipisci obcaecati
-            accusamus doloremque.
-          </p>
-        </div>
-        <div class="py-3 space-y-4" style="background-color: #6a996f">
-          <img src="assets/images/bank.png" class="w-8 h-8 mx-auto mt-3" />
-          <h3>LOYALTY</h3>
-          <p class="px-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quia
-            quod id voluptatem aliquid veritatis ipsum! Ad sapiente dignissimos
-            nemo?
-          </p>
-        </div>
-        <div class="py-3 space-y-4" style="background-color: #5696c2">
-          <img
-            src="assets/images/balance-scale.png"
-            class="w-8 h-8 mx-auto mt-3"
-          />
-          <h3>RESPECT</h3>
-          <p class="px-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quia
-            quod id voluptatem aliquid veritatis ipsum! Ad sapiente dignissimos
-            nemo?
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="py-10 mx-auto max-w-7xl">
-      <h2 class="text-3xl font-bold text-center md:mt-16">CONTACT US</h2>
-      <form class="max-w-2xl px-5 mx-auto space-y-8 divide-y divide-gray-200">
-        <div class="space-y-8">
-          <div class="pt-8">
-            <div class="flex flex-col space-y-5">
-              <!-- Input Name -->
-              <div>
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700"
-                >
-                  Name
-                </label>
-                <div class="mt-1">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    required="true"
-                    autocomplete="family-name"
-                    class="block w-full border-gray-300  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  />
-                </div>
-              </div>
-              <!-- Input Email -->
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700"
-                >
-                  Email
-                </label>
-                <div class="mt-1">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    required="true"
-                    autocomplete="family-name"
-                    class="block w-full border-gray-300  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  />
-                </div>
-              </div>
-              <!-- Input Message -->
-              <div class="sm:col-span-6">
-                <label
-                  for="message"
-                  class="block text-sm font-medium text-gray-700"
-                >
-                  Message
-                </label>
-                <div class="mt-1">
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="3"
-                    required
-                    class="block w-full border-gray-300  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  ></textarea>
-                </div>
-              </div>
-
-              <!-- End of input -->
-
-              <button
-                type="submit"
-                style="background-color: #5696c2"
-                class="inline-flex justify-center px-4 py-2 ml-3 text-sm font-medium text-white border border-transparent  hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                SUBMIT
-              </button>
+          <div class="carousel-item">
+            <img
+              src="assets/images/about-bg.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="font-bold text-left  carousel-caption d-none d-md-block transpara"
+              style="background-color: #141414"
+            >
+              <p class="px-4">WE DON'T HAVE THE BEST BUT WE HAVE THE</p>
+              <p class="px-4">GREATEST TEAM</p>
             </div>
           </div>
         </div>
-      </form>
-    </section>
-    <footer class="py-6 bg-gray-900">
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+
+      <!-- values section -->
+      <section class="py-10 mx-auto max-w-7xl">
+        <h2 class="text-3xl font-bold text-center md:mt-16">OUR VALUES</h2>
+        <div
+          class="grid grid-cols-1 mt-5 text-center text-white  lg:space-x-5 lg:grid-cols-3"
+        >
+          <div class="py-3 space-y-4" style="background-color: #ea7c6f">
+            <img src="assets/images/lightbulb-o.png" class="h-8 mx-auto mt-3" />
+            <h3>INNOVATIVE</h3>
+            <p class="px-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate, velit! Amet minima neque dolor dolore, id adipisci
+              obcaecati accusamus doloremque.
+            </p>
+          </div>
+          <div class="py-3 space-y-4" style="background-color: #6a996f">
+            <img src="assets/images/bank.png" class="w-8 h-8 mx-auto mt-3" />
+            <h3>LOYALTY</h3>
+            <p class="px-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              quia quod id voluptatem aliquid veritatis ipsum! Ad sapiente
+              dignissimos nemo?
+            </p>
+          </div>
+          <div class="py-3 space-y-4" style="background-color: #5696c2">
+            <img
+              src="assets/images/balance-scale.png"
+              class="w-8 h-8 mx-auto mt-3"
+            />
+            <h3>RESPECT</h3>
+            <p class="px-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit,
+              quia quod id voluptatem aliquid veritatis ipsum! Ad sapiente
+              dignissimos nemo?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- form section -->
+      <section class="py-10 mx-auto max-w-7xl">
+        <h2 class="text-3xl font-bold text-center md:mt-16">CONTACT US</h2>
+        <form name="contact-form" class="max-w-2xl px-5 mx-auto space-y-4">
+          <div class="space-y-2">
+            <div class="pt-8">
+              <div class="flex flex-col">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Name
+                  </label>
+                  <input
+                    class="block w-full py-1 mt-1 border-gray-300  border-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    name="name"
+                  />
+                  <div class="error hide">The field is required</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              class="block w-full py-1 border-gray-300  border-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              name="email"
+            />
+            <div class="error hide">Invalid email address</div>
+          </div>
+
+          <div class="sm:col-span-6">
+            <label class="block text-sm font-medium text-gray-700"
+              >Message</label
+            >
+            <textarea
+              class="block w-full border-gray-300  focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              name="message"
+            ></textarea>
+            <div class="error hide">The field is required</div>
+          </div>
+
+          <!-- End of input -->
+          <button
+            type="submit"
+            style="background-color: #5696c2"
+            class="inline-flex justify-center w-full py-2 text-sm font-medium text-white border border-transparent  hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            SUBMIT
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="py-6 mt-5 bg-gray-900">
       <div class="max-w-sm mx-auto text-center text-white">
         <p>Copyright &copy; 2016. PT Company</p>
-        <div class="flex justify-center mx-auto mt-3 space-x-5">
+        <div class="flex justify-center mx-auto mt-3 mb-2 space-x-5">
           <img class="h-8" src="assets/images/facebook-official.png" />
           <img class="h-8" src="assets/images/twitter.png" />
         </div>
