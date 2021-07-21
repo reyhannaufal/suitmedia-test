@@ -2,6 +2,22 @@
 
 Dibuat oleh Reyhan Naufal Rahman - rahman.reyhannaufal@gmail.com
 
+## Instalasi
+
+```bash
+yarn
+or
+npm install
+```
+
+## How To Run
+
+```bash
+yarn dev
+or
+npm run dev
+```
+
 ## Spesifikasi
 
 1. Buatlah prototype menggunakan HTML, CSS dan Javascript.

@@ -27,6 +27,7 @@ const validateInputs = () => {
     input.classList.remove("invalid");
     input.nextElementSibling.classList.add("hide");
 
+    //if input is not valid
     if (!input.isValid()) {
       input.classList.add("invalid");
       isFormValid = false;
@@ -40,9 +41,9 @@ form.addEventListener("submit", (e) => {
   shouldValidate = true;
   validateInputs();
   if (isFormValid) {
-    nameInput.value = " ";
-    emailInput.value = " ";
-    messageInput.value = " ";
+    nameInput.value = "";
+    emailInput.value = "";
+    messageInput.value = "";
   }
 });
 
